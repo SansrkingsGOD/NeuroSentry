@@ -105,57 +105,77 @@ Potential development areas include:
 - Scientific computing and machine-learning libraries.
 - A suitable caregiver notification interface.
 
-Specific libraries, model architectures, and notification services will be listed once they have been selected and tested.
+## 10. Setup and Installation
 
-## 10. Development Status
+### Prerequisites
+- Python 3.10 or later
+- Git
+- A code editor such as Visual Studio Code
 
-This repository is being established to document and organize the restructured NeuroSentry project.
+### Clone the Repository
 
-The workflow and component descriptions in this README represent the proposed design. Hardware integration, dataset preparation, model training, notification implementation, and end-to-end performance must be documented only after they have actually been completed and verified.
-
-No claim of clinical validation or reliable real-world intent detection is made at this stage.
-
-## 11. Planned Repository Structure
-
-```text
-NeuroSentry/
-├── README.md
-├── .gitignore
-├── docs/
-│   ├── system_architecture.md
-│   ├── component_diagram.md
-│   └── development_plan.md
-├── src/
-│   └── README.md
-├── data/
-│   └── README.md
-└── tests/
-    └── README.md
+```bash
+git clone https://github.com/SansrkingsGOD/NeuroSentry.git
+cd NeuroSentry
 ```
 
-These directories will be added as the corresponding documentation and source files are prepared. Sensitive EEG recordings and personal information must not be uploaded publicly.
+### Create a Virtual Environment
 
-## 12. Privacy and Safety
+Windows:
 
-- Obtain appropriate consent before collecting EEG data.
-- Protect identifiable and sensitive recordings.
-- Do not publish private participant information.
-- Do not treat unvalidated predictions as confirmed user needs.
-- Evaluate false predictions and alert reliability.
-- Treat NeuroSentry as an assistive prototype, not as a replacement for clinical assessment or human caregiving.
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
 
-## 13. Future Development
+Linux/macOS:
 
-Planned development activities include:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
-- Finalizing the EEG acquisition configuration.
-- Establishing a suitable data collection and labeling protocol.
-- Developing and evaluating the signal-processing pipeline.
-- Training and validating an intent-classification model.
-- Implementing confidence-based prediction validation.
-- Integrating the caregiver notification mechanism.
-- Testing the complete workflow and documenting the results.
+### Install Dependencies
 
----
+The software dependencies will be finalized when the signal-processing and machine-learning implementation is selected.
 
-**NeuroSentry — Exploring EEG-based assistive communication through intent classification and caregiver alerts.**
+Once `requirements.txt` is available, install the dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+**Current status:** These are development setup instructions. The complete application is not yet confirmed to be implemented or executable.
+
+## 11. Environment Variables
+
+The current documentation does not require any environment variables.
+
+If caregiver notifications, API integrations, or external services are added later, credentials must be stored in environment variables rather than committed to the repository.
+
+Never publish passwords, API keys, access tokens, or personal health information.
+
+## 12. Development Status
+
+NeuroSentry is under development. The repository currently documents the proposed system architecture, component design, and development plan.
+
+EEG acquisition, preprocessing, intent classification, confidence-based validation, and caregiver notification must be implemented and tested before the system can be considered operational.
+
+## 13. Testing
+
+Refer to `tests/test_cases.md` for the planned functional test cases and expected outcomes.
+
+Refer to `data/README.md` for information about sample data and its intended use.
+
+## 14. Technical Documentation
+
+- `docs/system_architecture.md` — Proposed system architecture and workflow.
+- `docs/component_diagram.md` — System components and their interactions.
+- `docs/development_plan.md` — Planned development activities.
+
+## 15. Safety and Limitations
+
+NeuroSentry is a proposed assistive research project, not a clinically validated medical device. Predictions must not be treated as confirmed user intent without appropriate validation. The system is intended to support caregivers, not replace human supervision or professional medical care.
+
+Specific libraries, model architectures, and notification services will be listed once they have been selected and tested.
+
