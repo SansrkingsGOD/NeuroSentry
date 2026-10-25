@@ -1,0 +1,6 @@
+sample_id,channel_1,channel_2,channel_3,channel_4,label
+S001,0.12,-0.08,0.05,0.02,example
+S002,0.15,-0.06,0.04,0.01,example
+S003,0.10,-0.09,0.06,0.03,example
+S004,0.13,-0.07,0.05,0.02,example
+S005,0.11,-0.05,0.03,0.04,example
